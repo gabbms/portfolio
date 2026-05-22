@@ -1,16 +1,8 @@
-/* ================================================
-   GABRIEL MARQUES — PORTFÓLIO
-   script.js
-   ================================================ */
-
-// ========== 1. NAVBAR: scrolled state + mobile toggle ==========
-
 const navbar    = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navLinks  = document.getElementById('navLinks');
 const allLinks  = document.querySelectorAll('.nav-link');
 
-// Adiciona classe .scrolled quando o usuário rola a página
 window.addEventListener('scroll', () => {
   if (window.scrollY > 40) {
     navbar.classList.add('scrolled');
@@ -20,11 +12,9 @@ window.addEventListener('scroll', () => {
   updateActiveLink();
 });
 
-// Abre/fecha o menu mobile
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 
-  // Anima o ícone de hamburguer → X
   const spans = navToggle.querySelectorAll('span');
   const isOpen = navLinks.classList.contains('open');
   spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)' : '';
@@ -32,7 +22,6 @@ navToggle.addEventListener('click', () => {
   spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
 });
 
-// Fecha o menu ao clicar em um link
 allLinks.forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
@@ -41,7 +30,6 @@ allLinks.forEach(link => {
   });
 });
 
-// ========== 2. ACTIVE LINK: destaca o item do menu conforme a seção visível ==========
 
 const sections = document.querySelectorAll('section[id]');
 
@@ -63,24 +51,20 @@ function updateActiveLink() {
   });
 }
 
-// Inicializa no carregamento
 updateActiveLink();
 
-// ========== 3. SKILL BARS: animação ao entrar na tela ==========
 
-// IntersectionObserver detecta quando as barras ficam visíveis
 const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const fill = entry.target.querySelector('.skill-fill');
       if (fill) {
         const targetWidth = fill.getAttribute('data-width');
-        // Aplica a largura depois de um pequeno atraso para garantir a transição CSS
         setTimeout(() => {
           fill.style.width = `${targetWidth}%`;
         }, 150);
       }
-      skillObserver.unobserve(entry.target); // anima apenas uma vez
+      skillObserver.unobserve(entry.target); z
     }
   });
 }, { threshold: 0.3 });
@@ -89,7 +73,6 @@ document.querySelectorAll('.skill-card').forEach(card => {
   skillObserver.observe(card);
 });
 
-// ========== 4. SCROLL REVEAL: anima elementos ao entrar na viewport ==========
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -100,13 +83,11 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-// Aplica a todos os cards/seções que queremos revelar
 const revealTargets = document.querySelectorAll(
   '.info-card, .skill-card, .project-card, .contact-card, .about-text'
 );
 
 revealTargets.forEach((el, index) => {
-  // Configuração inicial via CSS inline
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = `opacity 0.6s ease ${index * 0.06}s, transform 0.6s ease ${index * 0.06}s`;
@@ -114,14 +95,12 @@ revealTargets.forEach((el, index) => {
   revealObserver.observe(el);
 });
 
-// Quando revelado, restaura os valores
 document.addEventListener('DOMContentLoaded', () => {
   const style = document.createElement('style');
   style.textContent = `.revealed { opacity: 1 !important; transform: translateY(0) !important; }`;
   document.head.appendChild(style);
 });
 
-// ========== 5. SMOOTH SCROLL: melhora a experiência de navegação ==========
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
@@ -131,14 +110,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(targetId);
     if (target) {
       e.preventDefault();
-      const offset = 80; // altura da navbar fixa
+      const offset = 80; 
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
 });
 
-// ========== 6. TYPED EFFECT: efeito de digitação no subtítulo do hero ==========
 
 const subtitleEl = document.querySelector('.hero-subtitle');
 if (subtitleEl) {
@@ -147,7 +125,6 @@ if (subtitleEl) {
     'Apaixonado por código limpo e soluções criativas.'
   ];
 
-  // O efeito só roda uma vez, após a animação de entrada do hero
   setTimeout(() => {
     subtitleEl.innerHTML = '';
     let lineIndex = 0;
@@ -156,7 +133,6 @@ if (subtitleEl) {
 
     function typeNextChar() {
       if (lineIndex >= lines.length) {
-        // Garante que todo o texto fique visível ao final
         subtitleEl.innerHTML = lines.join('<br/>');
         return;
       }
@@ -176,10 +152,9 @@ if (subtitleEl) {
     }
 
     typeNextChar();
-  }, 900); // aguarda as animações iniciais do hero
+  }, 900); 
 }
 
-// ========== 7. YEAR: atualiza o ano no footer automaticamente ==========
 
 const footerCopy = document.querySelector('.footer-copy');
 if (footerCopy) {
@@ -189,7 +164,6 @@ if (footerCopy) {
   );
 }
 
-// ========== 8. PROJECT CARD: efeito de brilho ao mover o mouse ==========
 
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
