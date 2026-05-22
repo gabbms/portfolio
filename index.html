@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Marques — Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">GM<span class="dot">.</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" class="nav-link">Início</a></li>
+      <li><a href="#sobre" class="nav-link">Sobre</a></li>
+      <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+      <li><a href="#projetos" class="nav-link">Projetos</a></li>
+      <li><a href="#contato" class="nav-link cta">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag animate-in">Engenharia de Software</div>
+      <h1 class="hero-name animate-in">
+        Gabriel<br /><span class="outline-text">Marques</span><br />Sousa
+      </h1>
+      <p class="hero-subtitle animate-in">
+        Desenvolvedor em formação · Teresina, PI<br />
+        Apaixonado por código limpo e soluções criativas.
+      </p>
+      <div class="hero-actions animate-in">
+        <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+        <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+      </div>
+    </div>
+    <div class="hero-avatar animate-in">
+      <div class="avatar-frame">
+        <div class="avatar-inner">
+          <!-- FOTO DE PERFIL: substitua "sua-foto.jpg" pelo nome do seu arquivo de imagem -->
+          <img src="./img/perfil-gab.jpg" alt="Foto de Gabriel Marques" class="avatar-photo" />
+        </div>
+        <div class="avatar-ring"></div>
+        <div class="avatar-badge">
+          <span class="badge-dot"></span> Disponível
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint animate-in">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">01 — Sobre</span>
+        <h2 class="section-title">Quem sou eu</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            Sou estudante de <strong>Engenharia de Software</strong>, com foco no desenvolvimento de sistemas que combinam boa arquitetura com experiência de usuário.
+          </p>
+          <p>
+            Tenho interesse especial em desenvolvimento web full-stack, banco de dados relacionais e automação de processos. Gosto de transformar problemas reais em soluções digitais funcionais — do back-end ao front-end.
+          </p>
+          <p>
+            Meu objetivo é atuar como desenvolvedor back-end ou full-stack, contribuindo para projetos que gerem impacto real. A longo prazo, almejo me especializar em arquitetura de software e engenharia de sistemas escaláveis.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <div class="info-icon">🎓</div>
+            <div>
+              <div class="info-label">Formação</div>
+              <div class="info-value">Engenharia de Software</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Localização</div>
+              <div class="info-value">Teresina, Piauí</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">💡</div>
+            <div>
+              <div class="info-label">Interesse</div>
+              <div class="info-value">Full-Stack</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🚀</div>
+            <div>
+              <div class="info-label">Objetivo</div>
+              <div class="info-value">Arquitetura de Software</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HABILIDADES ========== -->
+  <section class="section section-alt" id="habilidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">02 — Habilidades</span>
+        <h2 class="section-title">Stack técnica</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-skill="HTML/CSS">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3l1.5 17L12 22l6.5-2L20 3H4z"/><path d="M16.5 7.5h-9l.5 5h8l-.5 5L12 19l-3.5-1.5"/></svg>
+          </div>
+          <div class="skill-name">HTML / CSS</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <div class="skill-level">Avançado</div>
+        </div>
+
+        <div class="skill-card" data-skill="JavaScript">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 15v-4m4 0v4c0 1 .5 2 2 2s2-1 2-2v-1"/></svg>
+          </div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <div class="skill-level">Intermediário</div>
+        </div>
+
+        <div class="skill-card" data-skill="Python">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8.5 2 8 4.5 8 6v2h8v1H6.5C5 9 3 10 3 13s2 4 3.5 4H8v-2.5c0-1.8 1.5-3.5 4-3.5s4 1.7 4 3.5V17h1.5c1.5 0 3.5-1 3.5-4s-2-4-3.5-4H16V6c0-1.5-.5-4-4-4z"/><circle cx="9.5" cy="6.5" r=".8" fill="currentColor"/><circle cx="14.5" cy="17.5" r=".8" fill="currentColor"/></svg>
+          </div>
+          <div class="skill-name">Python</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          <div class="skill-level">Intermediário</div>
+        </div>
+
+        <div class="skill-card" data-skill="Java">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 18s-1.5.8-1 1.5c.7.9 5 .9 6 0 .5-.8-1-1.5-1-1.5"/><path d="M9 15s-2 .5-1.5 1.5c.6 1 5 1 6 0C14 15.5 12 15 12 15"/><path d="M8.5 10C6 8 7 5 10 4.5M15.5 10C18 8 17 5 14 4.5"/><path d="M9 12c-2-1-1-3.5 1-3 1 0 2 1 2 2.5 0 0 0-4 3-4 2 0 2 2 1 3"/></svg>
+          </div>
+          <div class="skill-name">Java</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <div class="skill-level">Intermediário</div>
+        </div>
+
+        <div class="skill-card" data-skill="SQL">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v4c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 10v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4"/><path d="M4 14v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4"/></svg>
+          </div>
+          <div class="skill-name">SQL / Banco de dados</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          <div class="skill-level">Intermediário</div>
+        </div>
+
+        <div class="skill-card" data-skill="GitHub">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1-.3-3.3 1.3a11.5 11.5 0 0 0-6 0C6.3 2.8 5.3 3.1 5.3 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 3.9 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          </div>
+          <div class="skill-name">GitHub</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <div class="skill-level">Avançado</div>
+        </div>
+
+        <div class="skill-card" data-skill="APIs">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div class="skill-name">APIs / REST</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          <div class="skill-level">Intermediário</div>
+        </div>
+
+        <div class="skill-card" data-skill="Responsivo">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><rect x="14" y="15" width="8" height="6" rx="1"/></svg>
+          </div>
+          <div class="skill-name">Responsividade</div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <div class="skill-level">Avançado</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJETOS ========== -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">03 — Projetos</span>
+        <h2 class="section-title">O que já construí</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Projeto 1 -->
+        <article class="project-card" id="proj1">
+          <div class="project-thumb proj-thumb-1">
+            <div class="thumb-content">
+              <div class="thumb-browser">
+                <div class="browser-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="browser-body">
+                  <div class="mock-nav"></div>
+                  <div class="mock-hero"></div>
+                  <div class="mock-cards">
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Cardápio Digital — Restaurante</h3>
+            <p class="project-desc">
+              Sistema web completo de cardápio para restaurante, com autenticação de usuários, banco de dados em tempo real e busca de endereço por CEP. O painel administrativo permite gerenciar itens do menu dinamicamente.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">ViaCEP API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://projeto-sabor-de-casa.vercel.app/" class="btn btn-small btn-primary">Ver projeto</a>
+              <a href="https://github.com/gabbms/projeto-sabor-de-casa.git" class="btn btn-small btn-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project-card" id="proj2">
+          <div class="project-thumb proj-thumb-2">
+            <div class="thumb-content">
+              <div class="thumb-terminal">
+                <div class="terminal-bar">
+                  <span></span><span></span><span></span>
+                  <span class="terminal-title">EventManager.java</span>
+                </div>
+                <div class="terminal-body">
+                  <p><span class="t-green">class</span> <span class="t-yellow">Evento</span> {</p>
+                  <p>&nbsp;&nbsp;<span class="t-blue">String</span> nome;</p>
+                  <p>&nbsp;&nbsp;<span class="t-blue">Date</span> data;</p>
+                  <p>&nbsp;&nbsp;<span class="t-blue">int</span> vagas;</p>
+                  <p>}</p>
+                  <p class="t-dim">// CRUD completo</p>
+                  <p><span class="t-green">void</span> <span class="t-yellow">cadastrar</span>() {…}</p>
+                  <p><span class="t-green">void</span> <span class="t-yellow">listar</span>() {…}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-number">02</div>
+            <h3 class="project-title">Sistema de Gerenciamento de Eventos</h3>
+            <p class="project-desc">
+              Aplicação desktop desenvolvida em Java para gerenciar eventos acadêmicos e corporativos. Permite cadastro, listagem, edição e exclusão de eventos com controle de vagas e participantes.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">OOP</span>
+              <span class="tag">CRUD</span>
+              <span class="tag">Collections</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/gabbms/eventos-vip.git" class="btn btn-small btn-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section class="section section-alt" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">04 — Contato</span>
+        <h2 class="section-title">Vamos conversar</h2>
+      </div>
+      <div class="contact-layout">
+        <p class="contact-lead">
+          Estou aberto a oportunidades de estágio, projetos colaborativos ou apenas uma boa troca de ideias sobre tecnologia.
+        </p>
+        <div class="contact-cards">
+          <a href="mailto:gabriel.msouz@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">E-mail</div>
+              <div class="contact-value">gabriel.msouz@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://github.com/gabbms" class="contact-card" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1-.3-3.3 1.3a11.5 11.5 0 0 0-6 0C6.3 2.8 5.3 3.1 5.3 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 3.9 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">github.com/gabrielmarques</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/gabriel-marques-1b9883370/" class="contact-card" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.5"/><path d="M11 10v7m0-5c0-1.1.9-2 2-2h1a2 2 0 0 1 2 2v5"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">linkedin.com/in/gabrielmarques</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">GM<span class="dot">.</span></div>
+        <p class="footer-copy">© 2025 Gabriel Marques Sousa. Feito com HTML, CSS & JS.</p>
+        <a href="#inicio" class="back-top" aria-label="Voltar ao topo">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
